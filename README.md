@@ -8,13 +8,15 @@
 
 ```bash  
 $ sudo apt-get update
-$ sudo apt-get install subversion build-essential git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip git wget
+$ sudo apt-get install subversion build-essential git-core libncurses5-dev 
+zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial 
+bzr ecj cvs unzip git wget
 ```  
 
 ## Download the Source  
 
 ```bash  
-$ git clone https://github.com/gl-inet/lede-imagebuilder-ar71xx-generic.git
+$ git clone https://github.com/gl-inet/lede-imagebuilder-ar71xx-nand.git
 $ cd lede-imagebuilder-ar71xx-generic
 ```  
 
