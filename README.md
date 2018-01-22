@@ -17,7 +17,7 @@ bzr ecj cvs unzip git wget
 
 ```bash  
 $ git clone https://github.com/gl-inet/lede-imagebuilder-ar71xx-nand.git
-$ cd lede-imagebuilder-ar71xx-generic
+$ cd lede-imagebuilder-ar71xx-nand
 ```  
 
 ## Configuration  
