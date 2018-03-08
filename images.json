@@ -5,8 +5,6 @@
 	},
 	"profiles": {
 		"GL-AR300MD": {
-			"include": "",
-			"exclude": ""
 		}
 	}
 }
