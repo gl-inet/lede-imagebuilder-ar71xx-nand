@@ -23,7 +23,8 @@ $ cd lede-imagebuilder-ar71xx-nand
 ## Configuration  
 
 You can change images.json file to install or remove packages for your  
-preference.  
+preference. Note that "-pkgname" in the package list means remove "pkgname"  
+from the package list.
 
 ## Create Image  
 
@@ -32,7 +33,11 @@ We can use gl_image utility to create image quickly. You can issue
 
 For GL-AR300MD of v2.27:  
 ```bash  
+Stoke firmware:  
 $ ./gl_image -i v1 -p GL-AR300MD -v 2.27
+
+Clean firmware:
+$ ./gl_image -i clean -p GL-AR300MD -v 2.27
 ```  
 
 We can use ourselves files with -f option, value is files directory name.  
