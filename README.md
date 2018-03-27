@@ -34,10 +34,10 @@ We can use gl_image utility to create image quickly. You can issue
 For GL-AR300MD of v2.27:  
 ```bash  
 Stoke firmware:  
-$ ./gl_image -i v1 -p GL-AR300MD -v 2.27
+$ ./gl_image -i v1 -p GL-AR300MNAND -v 2.27
 
 Clean firmware:
-$ ./gl_image -i clean -p GL-AR300MD -v 2.27
+$ ./gl_image -i clean -p GL-AR300MNAND -v 2.27
 ```  
 
 We can use ourselves files with -f option, value is files directory name.  
