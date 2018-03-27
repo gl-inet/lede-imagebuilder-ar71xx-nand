@@ -4,7 +4,7 @@
 		"clean": "luci"
 	},
 	"profiles": {
-		"GL-AR300MD": {
+		"GL-AR300MNAND": {
 		}
 	}
 }

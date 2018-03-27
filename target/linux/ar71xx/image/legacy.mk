@@ -1063,7 +1063,7 @@ $(eval $(call SingleProfile,NetgearNAND,64k,R6100,r6100,R6100,ttyS0,115200,$$(r6
 
 $(eval $(call SingleProfile,ZyXELNAND,128k,NBG6716,nbg6716,NBG6716,ttyS0,115200,NBG6716,$$(zyx_nbg6716_mtdlayout),mem=256M))
 
-$(eval $(call SingleProfile,GLNAND,64k,GL-AR300MD,gl-ar300m,GL-AR300M,ttyS0,115200,$$(gl-ar300md_mtdlayout),gl-ar300m))
+$(eval $(call SingleProfile,GLNAND,64k,GL-AR300MNAND,gl-ar300m,GL-AR300M,ttyS0,115200,$$(gl-ar300md_mtdlayout),gl-ar300m))
 
 endif # ifeq ($(SUBTARGET),nand)
 

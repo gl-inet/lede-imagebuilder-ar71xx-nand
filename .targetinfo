@@ -2699,7 +2699,7 @@ Target-Profile-Description:
 Build firmware images for Zyxel NBG 6716
 @@
 
-Target-Profile: DEVICE_GL-AR300MD
+Target-Profile: DEVICE_GL-AR300MNAND
 Target-Profile-Name: GL-AR300M with nand flash
 Target-Profile-Packages: kmod-usb-core kmod-usb2 uboot-envtools
 Target-Profile-Description:

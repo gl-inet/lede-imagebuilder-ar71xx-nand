@@ -93,8 +93,8 @@ define LegacyDevice/NBG6716
 endef
 LEGACY_DEVICES += NBG6716
 
-define LegacyDevice/GL-AR300MD
+define LegacyDevice/GL-AR300MNAND
 	DEVICE_TITLE := GL-AR300M with nand flash
 	DEVICE_PACKAGES := kmod-usb-core kmod-usb2 uboot-envtools
 endef
-LEGACY_DEVICES += GL-AR300MD
+LEGACY_DEVICES += GL-AR300MNAND
