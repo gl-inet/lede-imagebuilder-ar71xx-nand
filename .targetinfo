@@ -6,7 +6,7 @@ Target-Arch:
 Target-Arch-Packages: 
 Target-Features: gpio low_mem pci source-only usb
 Target-Depends: 
-Target-Optimization: -Os -pipe
+Target-Optimization: -O2 -pipe
 CPU-Type: 
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -22,7 +22,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio low_mem pci source-only squashfs tgz usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -221,7 +221,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_mips32
 Target-Features: gpio low_mem pci source-only squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -259,7 +259,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio low_mem pci source-only tgz usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -284,7 +284,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio pci source-only squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -310,7 +310,7 @@ Target-Arch: powerpc
 Target-Arch-Packages: powerpc_464fp
 Target-Features: dt fpu gpio pci pcie usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=464fp
+Target-Optimization: -O2 -pipe -mcpu=464fp
 CPU-Type: 464fp
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -326,7 +326,7 @@ Target-Arch: powerpc
 Target-Arch-Packages: powerpc_464fp
 Target-Features: dt fpu gpio nand pci pcie ramdisk rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=464fp
+Target-Optimization: -O2 -pipe -mcpu=464fp
 CPU-Type: 464fp
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -379,7 +379,7 @@ Target-Arch: powerpc
 Target-Arch-Packages: powerpc_464fp
 Target-Features: dt ext4 fpu gpio pci pcie ramdisk usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=464fp
+Target-Optimization: -O2 -pipe -mcpu=464fp
 CPU-Type: 464fp
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -420,7 +420,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: atm gpio low_mem source-only squashfs
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -436,7 +436,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: atm gpio low_mem source-only squashfs
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -481,7 +481,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: atm gpio low_mem source-only squashfs
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -506,7 +506,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_24kc
 Target-Features: dt gpio mips16 pci usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -522,7 +522,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_24kc
 Target-Features: dt gpio mips16 pci squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -1482,6 +1482,20 @@ Target-Profile-Name: GL.iNet GL-AR750
 Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca9887 kmod-usb-core kmod-usb2 kmod-usb-storage
 Target-Profile-Description:
 Build firmware images for GL.iNet GL-AR750
+@@
+
+Target-Profile: DEVICE_gl-ar750s
+Target-Profile-Name: GL.iNet GL-AR750S
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca9887 kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for GL.iNet GL-AR750S
+@@
+
+Target-Profile: DEVICE_gl-ar1200
+Target-Profile-Name: GL.iNet GL-AR1200
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca9888 kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for GL.iNet GL-AR1200
 @@
 
 Target-Profile: DEVICE_gl-domino
@@ -2625,7 +2639,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_24kc
 Target-Features: dt gpio mips16 nand pci rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -2699,11 +2713,18 @@ Target-Profile-Description:
 Build firmware images for Zyxel NBG 6716
 @@
 
-Target-Profile: DEVICE_GL-AR300MNAND
+Target-Profile: DEVICE_GL-AR300MD
 Target-Profile-Name: GL-AR300M with nand flash
 Target-Profile-Packages: kmod-usb-core kmod-usb2 uboot-envtools
 Target-Profile-Description:
 Build firmware images for GL-AR300M with nand flash
+@@
+
+Target-Profile: DEVICE_GL-AR750S
+Target-Profile-Name: GL-AR750S with nand flash
+Target-Profile-Packages: kmod-usb-core kmod-usb2 uboot-envtools
+Target-Profile-Description:
+Build firmware images for GL-AR750S with nand flash
 @@
 
 Target: ar71xx/mikrotik
@@ -2713,7 +2734,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_24kc
 Target-Features: dt gpio minor mips16 nand pci ramdisk squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -2754,7 +2775,7 @@ Target-Arch: arc
 Target-Arch-Packages: arc_arc700
 Target-Features: dt gpio usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -matomic -marc700
+Target-Optimization: -O2 -pipe -matomic -marc700
 CPU-Type: arc700
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -2770,7 +2791,7 @@ Target-Arch: arc
 Target-Arch-Packages: arc_arc700
 Target-Features: dt ext4 gpio ramdisk usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -matomic -marc700
+Target-Optimization: -O2 -pipe -matomic -marc700
 CPU-Type: arc700
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -2795,7 +2816,7 @@ Target-Arch: arc
 Target-Arch-Packages: arc_archs
 Target-Features: dt gpio usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -matomic -marchs
+Target-Optimization: -O2 -pipe -matomic -marchs
 CPU-Type: archs
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -2811,7 +2832,7 @@ Target-Arch: arc
 Target-Arch-Packages: arc_archs
 Target-Features: dt ext4 gpio ramdisk usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -matomic -marchs
+Target-Optimization: -O2 -pipe -matomic -marchs
 CPU-Type: archs
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -2854,7 +2875,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a15_neon-vfpv4
 Target-Features: arm_v7 cpiogz dt ext4 fpu gpio pci ramdisk rtc squashfs targz usb virtio
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a15 -mfpu=neon-vfpv4
+Target-Optimization: -O2 -pipe -mcpu=cortex-a15 -mfpu=neon-vfpv4
 CPU-Type: cortex-a15+neon-vfpv4
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -2872,7 +2893,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_xscale
 Target-Features: dt ext2 gpio rtc squashfs targz ubifs usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=xscale
+Target-Optimization: -O2 -pipe -mcpu=xscale
 CPU-Type: xscale
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -2888,7 +2909,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_arm926ej-s
 Target-Features: dt ext2 gpio rtc squashfs targz ubifs usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=arm926ej-s
+Target-Optimization: -O2 -pipe -mcpu=arm926ej-s
 CPU-Type: arm926ej-s
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -2982,7 +3003,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a5
 Target-Features: dt ext2 gpio rtc squashfs targz ubifs usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a5
+Target-Optimization: -O2 -pipe -mcpu=cortex-a5
 CPU-Type: cortex-a5
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3008,7 +3029,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_mips32
 Target-Features: gpio low_mem pci small_flash squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3062,7 +3083,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio pci source-only squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -3079,7 +3100,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio pci source-only squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -3116,7 +3137,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio pci pcmcia source-only squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -3141,7 +3162,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a9
 Target-Features: arm_v7 dt gpio nand pci pcie squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a9
+Target-Optimization: -O2 -pipe -mcpu=cortex-a9
 CPU-Type: cortex-a9
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3293,7 +3314,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_xscale
 Target-Features: audio display ext4 fpu gpio usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=xscale
+Target-Optimization: -O2 -pipe -mcpu=xscale
 CPU-Type: xscale
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3310,7 +3331,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_arm1176jzf-s_vfp
 Target-Features: arm_v6 audio display dt ext4 fpu gpio usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=arm1176jzf-s -mfpu=vfp
+Target-Optimization: -O2 -pipe -mcpu=arm1176jzf-s -mfpu=vfp
 CPU-Type: arm1176jzf-s+vfp
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3333,7 +3354,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a7_neon-vfpv4
 Target-Features: arm_v7 audio display dt ext4 fpu gpio usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a7 -mfpu=neon-vfpv4
+Target-Optimization: -O2 -pipe -mcpu=cortex-a7 -mfpu=neon-vfpv4
 CPU-Type: cortex-a7+neon-vfpv4
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3356,7 +3377,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a53_neon-vfpv4
 Target-Features: arm_v7 audio display dt ext4 fpu gpio usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a53 -mfpu=neon-vfpv4
+Target-Optimization: -O2 -pipe -mcpu=cortex-a53 -mfpu=neon-vfpv4
 CPU-Type: cortex-a53+neon-vfpv4
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3381,7 +3402,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio pci squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3397,7 +3418,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio pci pcmcia squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3601,7 +3622,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_74kc
 Target-Features: gpio mips16 pci squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=74kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=74kc
 CPU-Type: 74kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -3999,7 +4020,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio low_mem pci pcmcia small_flash squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -4261,7 +4282,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_mips32
 Target-Features: atm dt gpio pci pcie pcmcia squashfs usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -4287,7 +4308,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_mips32
 Target-Features: atm dt gpio pci pcie pcmcia squashfs usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -4913,7 +4934,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_mips32
 Target-Features: atm dt gpio pci pcie pcmcia squashfs usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5542,7 +5563,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_mpcore_vfp
 Target-Features: dt fpu gpio pci pcie rtc squashfs usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=mpcore -mfpu=vfp
+Target-Optimization: -O2 -pipe -mcpu=mpcore -mfpu=vfp
 CPU-Type: mpcore+vfp
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5561,7 +5582,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_fa526
 Target-Features: gpio pci rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=fa526
+Target-Optimization: -O2 -pipe -mcpu=fa526
 CPU-Type: fa526
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5577,7 +5598,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_fa526
 Target-Features: gpio pci rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=fa526
+Target-Optimization: -O2 -pipe -mcpu=fa526
 CPU-Type: fa526
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5593,7 +5614,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_fa526
 Target-Features: gpio pci rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=fa526
+Target-Optimization: -O2 -pipe -mcpu=fa526
 CPU-Type: fa526
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5611,7 +5632,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a9_neon
 Target-Features: arm_v7 audio display dt fpu gpio nand pci pcie rtc squashfs targz ubifs usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a9 -mfpu=neon
+Target-Optimization: -O2 -pipe -mcpu=cortex-a9 -mfpu=neon
 CPU-Type: cortex-a9+neon
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5658,7 +5679,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a15_neon-vfpv4
 Target-Features: arm_v7 dt fpu gpio nand pci pcie rtc squashfs ubifs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a15 -mfpu=neon-vfpv4
+Target-Optimization: -O2 -pipe -mcpu=cortex-a15 -mfpu=neon-vfpv4
 CPU-Type: cortex-a15+neon-vfpv4
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5761,7 +5782,7 @@ Target-Arch: armeb
 Target-Arch-Packages: armeb_xscale
 Target-Features: gpio pci rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=xscale
+Target-Optimization: -O2 -pipe -mcpu=xscale
 CPU-Type: xscale
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5777,7 +5798,7 @@ Target-Arch: armeb
 Target-Arch-Packages: armeb_xscale
 Target-Features: gpio pci rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=xscale
+Target-Optimization: -O2 -pipe -mcpu=xscale
 CPU-Type: xscale
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5836,7 +5857,7 @@ Target-Arch: armeb
 Target-Arch-Packages: armeb_xscale
 Target-Features: gpio pci rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=xscale
+Target-Optimization: -O2 -pipe -mcpu=xscale
 CPU-Type: xscale
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5862,7 +5883,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_xscale
 Target-Features: dt gpio nand pci ramdisk rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=xscale
+Target-Optimization: -O2 -pipe -mcpu=xscale
 CPU-Type: xscale
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5944,7 +5965,7 @@ Target-Arch:
 Target-Arch-Packages: 
 Target-Features: dt gpio mips16 pci squashfs
 Target-Depends: 
-Target-Optimization: -Os -pipe
+Target-Optimization: -O2 -pipe
 CPU-Type: 
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -5960,7 +5981,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_24kc
 Target-Features: atm dt gpio mips16 nand pci squashfs ubifs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6103,7 +6124,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_24kc
 Target-Features: atm dt gpio mips16 nand pci ramdisk squashfs ubifs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6281,7 +6302,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_24kc
 Target-Features: atm dt gpio mips16 pci ramdisk small_flash squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6340,7 +6361,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_24kc
 Target-Features: dt gpio mips16 nand pci squashfs
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6450,7 +6471,7 @@ Target-Arch:
 Target-Arch-Packages: 
 Target-Features: dt gpio nand pci pcie squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe
+Target-Optimization: -O2 -pipe
 CPU-Type: 
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6525,7 +6546,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a9
 Target-Features: arm_v7 dt gpio nand pci pcie rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a9
+Target-Optimization: -O2 -pipe -mcpu=cortex-a9
 CPU-Type: cortex-a9
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6586,7 +6607,7 @@ Target-Arch:
 Target-Arch-Packages: _24kc
 Target-Features: dt pci ramdisk rtc source-only usb
 Target-Depends: 
-Target-Optimization: -Os -pipe
+Target-Optimization: -O2 -pipe
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6602,7 +6623,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_24kc
 Target-Features: dt mips16 pci ramdisk rtc source-only usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6619,7 +6640,7 @@ Target-Arch: mips
 Target-Arch-Packages: mips_24kc
 Target-Features: dt mips16 pci ramdisk rtc source-only usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6636,7 +6657,7 @@ Target-Arch: mips64el
 Target-Arch-Packages: mips64el_mips64
 Target-Features: dt pci ramdisk rtc source-only usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips64 -mtune=mips64 -mabi=64
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips64 -mtune=mips64 -mabi=64
 CPU-Type: mips64
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6653,7 +6674,7 @@ Target-Arch: mips64
 Target-Arch-Packages: mips64_mips64
 Target-Features: dt pci ramdisk rtc source-only usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips64 -mtune=mips64 -mabi=64
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips64 -mtune=mips64 -mabi=64
 CPU-Type: mips64
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6672,7 +6693,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_arm926ej-s
 Target-Features: dt gpio low_mem source-only squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=arm926ej-s
+Target-Optimization: -O2 -pipe -mcpu=arm926ej-s
 CPU-Type: arm926ej-s
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -6712,7 +6733,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a7_neon-vfpv4
 Target-Features: arm_v7 dt gpio nand pci rtc squashfs ubifs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a7 -mfpu=neon-vfpv4
+Target-Optimization: -O2 -pipe -mcpu=cortex-a7 -mfpu=neon-vfpv4
 CPU-Type: cortex-a7+neon-vfpv4
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6737,7 +6758,7 @@ Target-Arch: powerpc
 Target-Arch-Packages: powerpc_8540
 Target-Features: dt gpio pci pcie squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=8540
+Target-Optimization: -O2 -pipe -mcpu=8540
 CPU-Type: 8540
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6767,7 +6788,7 @@ Target-Arch: powerpc
 Target-Arch-Packages: powerpc_8540
 Target-Features: dt gpio pci pcie squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=8540
+Target-Optimization: -O2 -pipe -mcpu=8540
 CPU-Type: 8540
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6797,7 +6818,7 @@ Target-Arch: powerpc
 Target-Arch-Packages: powerpc_8540
 Target-Features: dt gpio pci pcie squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=8540
+Target-Optimization: -O2 -pipe -mcpu=8540
 CPU-Type: 8540
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6829,7 +6850,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a9_vfpv3
 Target-Features: arm_v7 dt fpu gpio nand pci pcie rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a9 -mfpu=vfpv3-d16
+Target-Optimization: -O2 -pipe -mcpu=cortex-a9 -mfpu=vfpv3-d16
 CPU-Type: cortex-a9+vfpv3
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6952,7 +6973,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_arm926ej-s
 Target-Features: dt ext4 gpio rtc usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=arm926ej-s
+Target-Optimization: -O2 -pipe -mcpu=arm926ej-s
 CPU-Type: arm926ej-s
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -6991,7 +7012,7 @@ Target-Arch: mips64
 Target-Arch-Packages: mips64_octeon
 Target-Features: dt gpio pci ramdisk squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -march=octeon -mabi=64
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=octeon -mabi=64
 CPU-Type: octeon
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -7038,7 +7059,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a9_vfpv3
 Target-Features: arm_v7 audio display dt ext4 fpu gpio nand rtc targz ubifs usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a9 -mfpu=vfpv3-d16
+Target-Optimization: -O2 -pipe -mcpu=cortex-a9 -mfpu=vfpv3-d16
 CPU-Type: cortex-a9+vfpv3
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -7071,7 +7092,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_arm1136j-s
 Target-Features: arm_v6 audio broken display dt gpio jffs2_nand squashfs targz usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=arm1136j-s
+Target-Optimization: -O2 -pipe -mcpu=arm1136j-s
 CPU-Type: arm1136j-s
 Linux-Version: 4.1
 Linux-Release: 1
@@ -7103,7 +7124,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_xscale
 Target-Features: broken dt gpio pci rtc usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=xscale
+Target-Optimization: -O2 -pipe -mcpu=xscale
 CPU-Type: xscale
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -7119,7 +7140,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_xscale
 Target-Features: broken dt gpio pci rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=xscale
+Target-Optimization: -O2 -pipe -mcpu=xscale
 CPU-Type: xscale
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -7136,7 +7157,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_xscale
 Target-Features: broken dt gpio pci rtc targz usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=xscale
+Target-Optimization: -O2 -pipe -mcpu=xscale
 CPU-Type: xscale
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -7155,7 +7176,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_mpcore
 Target-Features: dt gpio nand pci pcie ramdisk rtc squashfs ubifs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=mpcore
+Target-Optimization: -O2 -pipe -mcpu=mpcore
 CPU-Type: mpcore
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -7216,7 +7237,7 @@ Target-Arch: powerpc
 Target-Arch-Packages: powerpc_405
 Target-Features: broken dt gpio pci pcie squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=405
+Target-Optimization: -O2 -pipe -mcpu=405
 CPU-Type: 405
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -7234,7 +7255,7 @@ Target-Arch: powerpc
 Target-Arch-Packages: powerpc_440
 Target-Features: broken dt gpio pci pcie squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=440
+Target-Optimization: -O2 -pipe -mcpu=440
 CPU-Type: 440
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -7252,7 +7273,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio squashfs
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -7268,7 +7289,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_24kc
 Target-Features: dt gpio mips16 ramdisk squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -8020,7 +8041,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_24kc
 Target-Features: dt gpio mips16 pci squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -8443,7 +8464,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_24kc
 Target-Features: dt gpio mips16 nand pci ramdisk rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -8621,7 +8642,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_24kc
 Target-Features: dt gpio mips16 pci squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -8701,7 +8722,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_24kc
 Target-Features: dt gpio mips16 pci squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -8767,7 +8788,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_74kc
 Target-Features: dt gpio mips16 pci squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=74kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=74kc
 CPU-Type: 74kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -8847,7 +8868,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_24kc
 Target-Features: dt gpio mips16 pci squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+Target-Optimization: -O2 -pipe -mno-branch-likely -march=24kc
 CPU-Type: 24kc
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -8914,7 +8935,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: gpio minor nand pci squashfs targz
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -8932,7 +8953,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a8_vfpv3
 Target-Features: arm_v7 display dt ext4 fpu gpio rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a8 -mfpu=vfpv3-d16
+Target-Optimization: -O2 -pipe -mcpu=cortex-a8 -mfpu=vfpv3-d16
 CPU-Type: cortex-a8+vfpv3
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -9063,7 +9084,7 @@ Target-Arch: x86_64
 Target-Arch-Packages: x86_64
 Target-Features: audio ext4 source-only squashfs
 Target-Depends: 
-Target-Optimization: -Os -pipe
+Target-Optimization: -O2 -pipe
 CPU-Type: 
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -9081,7 +9102,7 @@ Target-Arch: i386
 Target-Arch-Packages: i386_pentium
 Target-Features: display ext4 fpu pci pcmcia rtc squashfs targz usb vdi vmdk
 Target-Depends: 
-Target-Optimization: -Os -pipe -march=pentium-mmx
+Target-Optimization: -O2 -pipe -march=pentium-mmx
 CPU-Type: pentium
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -9097,7 +9118,7 @@ Target-Arch: i386
 Target-Arch-Packages: i386_pentium4
 Target-Features: audio display ext4 fpu gpio pci pcie pcmcia rtc squashfs targz usb vdi virtio vmdk
 Target-Depends: 
-Target-Optimization: -Os -pipe -march=pentium4
+Target-Optimization: -O2 -pipe -march=pentium4
 CPU-Type: pentium4
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -9122,7 +9143,7 @@ Target-Arch: i386
 Target-Arch-Packages: i386_pentium
 Target-Features: display ext4 fpu pci pcie pcmcia rtc squashfs targz usb vdi vmdk
 Target-Depends: 
-Target-Optimization: -Os -pipe -march=pentium-mmx
+Target-Optimization: -O2 -pipe -march=pentium-mmx
 CPU-Type: pentium
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -9146,7 +9167,7 @@ Target-Arch: i386
 Target-Arch-Packages: i386_pentium
 Target-Features: display ext4 gpio pci rtc squashfs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -march=pentium-mmx
+Target-Optimization: -O2 -pipe -march=pentium-mmx
 CPU-Type: pentium
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -9176,7 +9197,7 @@ Target-Arch: x86_64
 Target-Arch-Packages: x86_64
 Target-Features: display ext4 fpu gpio pci pcie pcmcia rtc squashfs targz usb vdi virtio vmdk
 Target-Depends: 
-Target-Optimization: -Os -pipe
+Target-Optimization: -O2 -pipe
 CPU-Type: 
 Linux-Version: 4.4.92
 Linux-Release: 1
@@ -9201,7 +9222,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: audio display gpio nand rtc source-only targz ubifs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -9217,7 +9238,7 @@ Target-Arch: mipsel
 Target-Arch-Packages: mipsel_mips32
 Target-Features: audio display gpio nand rtc source-only targz ubifs usb
 Target-Depends: 
-Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+Target-Optimization: -O2 -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
 Linux-Version: 3.18.43
 Linux-Release: 1
@@ -9235,7 +9256,7 @@ Target-Arch: arm
 Target-Arch-Packages: arm_cortex-a9_neon
 Target-Features: arm_v7 display dt fpu gpio pci rtc targz usb usbgadget
 Target-Depends: 
-Target-Optimization: -Os -pipe -mcpu=cortex-a9 -mfpu=neon
+Target-Optimization: -O2 -pipe -mcpu=cortex-a9 -mfpu=neon
 CPU-Type: cortex-a9+neon
 Linux-Version: 4.4.92
 Linux-Release: 1
