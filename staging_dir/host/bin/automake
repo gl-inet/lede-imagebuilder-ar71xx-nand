@@ -33,7 +33,7 @@ use strict;
 
 BEGIN
 {
-  @Automake::perl_libdirs = ($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/automake-1.15' : '/home/kyson/workspace/devlop/release/images/mips_24kc/staging_dir/host/share/automake-1.15')
+  @Automake::perl_libdirs = ($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/automake-1.15' : '/home/luo/gl_image/mips_24kc/staging_dir/host/share/automake-1.15')
     unless @Automake::perl_libdirs;
   unshift @INC, @Automake::perl_libdirs;
 
