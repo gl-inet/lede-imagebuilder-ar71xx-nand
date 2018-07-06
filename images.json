@@ -6,6 +6,6 @@
 		"clean": "luci"
 	},
 	"extend": {
-		"GL-AR750S": "kmod-ath10k ath10k-firmware-qca9887"
+		"GL-AR750S": "kmod-ath10k ath10k-firmware-qca9887 kmod-fast-classifier kmod-shortcut-fe"
 	}
 }
